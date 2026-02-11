@@ -81,10 +81,7 @@ export default function Login() {
             </Typography>
           </Stack>
 
-          <Alert severity="info" sx={{ mb: 2, borderRadius: 2 }}>
-            <strong>Demo mode</strong> — Enter any email &amp; password to log in
-            (no backend needed).
-          </Alert>
+
 
           {error && (
             <Alert severity="error" sx={{ mb: 2, borderRadius: 2 }}>

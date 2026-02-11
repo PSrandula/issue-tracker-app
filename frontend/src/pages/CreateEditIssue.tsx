@@ -74,7 +74,7 @@ export default function CreateEditIssue() {
       };
 
       if (isEdit) {
-        await api.put(`/issues/${id}`, data);
+        await api.patch(`/issues/${id}`, data);
         setSuccess("Issue updated successfully!");
         setTimeout(() => navigate(`/issues/${id}`), 800);
       } else {

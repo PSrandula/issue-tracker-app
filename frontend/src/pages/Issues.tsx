@@ -118,7 +118,11 @@ export default function Issues() {
         <Button
           variant="outlined"
           startIcon={<ExportIcon />}
-          onClick={() => exportCSV(issues)}
+          onClick={async () => {
+            const res = await api.get("/issues", { params: { limit: 100000 } });
+            const all = Array.isArray(res.data) ? res.data : res.data.issues ?? [];
+            exportCSV(all);
+          }}
         >
           Export CSV
         </Button>

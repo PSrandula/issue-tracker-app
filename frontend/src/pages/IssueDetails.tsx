@@ -47,9 +47,9 @@ export default function IssueDetails() {
 
   const handleStatusChange = (status: string) => {
     setConfirmAction({
-      title: `Mark this issue as "${status}"?`,
+        title: `Mark this issue as "${status}"?`,
       action: async () => {
-        await api.patch(`/issues/${id}/status`, { status });
+        await api.patch(`/issues/${id}`, { status });
         refreshIssue();
         setConfirmOpen(false);
       },
