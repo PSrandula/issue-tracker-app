@@ -1,6 +1,24 @@
-# Issue Tracker — Local Setup
+# Issue Tracker Application
 
-This repo contains a simple Issue Tracker with a React + Vite frontend and Express backend (MongoDB).
+A full-stack Issue Tracker application built using React (Vite), Express.js, and MongoDB.
+The system allows users to create, manage, update, and track issues efficiently.
+
+## Features
+- User Registration & Login (JWT Authentication)
+- Create, Read, Update, Delete Issues
+- Issue Status & Priority Badges
+- Search & Filter Issues
+- Pagination
+- Secure Password Hashing
+- RESTful API
+
+## Tech Stack
+- Frontend: React + Vite + TypeScript + Tailwind CSS
+- Backend: Node.js + Express.js
+- Database: MongoDB Atlas
+- Authentication: JWT
+
+## Installation
 
 Quick start
 
@@ -9,11 +27,9 @@ Quick start
 - Open `backend/.env` and ensure `MONGO_URI` is set (Atlas connection string or local MongoDB).
 - From `backend` folder:
 
-```bash
 cd backend
 npm install
 npm start
-```
 
 Server runs on `http://localhost:5000` by default.
 
@@ -21,18 +37,14 @@ Server runs on `http://localhost:5000` by default.
 
 - By default the project can run in mock mode. To use the real backend, create or edit `frontend/.env` and set:
 
-```
 VITE_USE_MOCK=false
 VITE_API_URL=http://localhost:5000/api
-```
 
 - From `frontend` folder:
 
-```bash
 cd frontend
 npm install
 npm run dev
-```
 
 3. Auth / API
 
